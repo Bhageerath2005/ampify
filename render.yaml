@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ampify-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    repo: https://github.com/Bhageerath2005/ampify.git
+    branch: main
+    rootDir: backend
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: NODE_ENV
+        value: production
