@@ -2,9 +2,11 @@ services:
   - type: web
     name: ampify-backend
     env: node
-    plan: free
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm start
+    buildCommand: npm install
+    startCommand: npm start
+    repo: https://github.com/Bhageerath2005/ampify.git
+    branch: main
+    rootDir: backend
     envVars:
       - key: MONGO_URI
         sync: false
